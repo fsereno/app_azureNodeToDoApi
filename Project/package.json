@@ -1,11 +1,17 @@
 {
-  "name": "project",
+  "name": "app-azure-node-todo-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is an Azure Node JS package",
+  "repository": "https://github.com/fsereno/app_azureNodeToDoApi",
   "scripts": {
     "start": "func start",
     "test": "echo \"No tests yet...\""
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "mongodb": "^3.6.5"
+  },
+  "devDependencies": {},
+  "main": "index.js",
+  "author": "Fabio Sereno",
+  "license": "ISC"
 }
