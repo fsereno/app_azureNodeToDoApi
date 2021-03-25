@@ -10,9 +10,12 @@ module.exports = async function (context, req) {
     const connection = await MongoClient.connect(URL);
     const todoCollection = connection.db(DATABASE_NAME).collection(COLLECTION_NAME);
 
+    const body = req.body;
+    delete body._id;
+
     await todoCollection.updateOne(
         { _id: ObjectId(req.params.id) },
-        { $set: req.body }
+        { $set: body }
     );
 
     await connection.close();
