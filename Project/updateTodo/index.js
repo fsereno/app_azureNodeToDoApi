@@ -1,4 +1,5 @@
 const MongoClient = require('mongodb').MongoClient;
+const ObjectId = require('mongodb').ObjectId;
 
 module.exports = async function (context, req) {
 
@@ -8,11 +9,15 @@ module.exports = async function (context, req) {
 
     const connection = await MongoClient.connect(URL);
     const todoCollection = connection.db(DATABASE_NAME).collection(COLLECTION_NAME);
-    const result = await todoCollection.find({username: "in28minutes"}).toArray();
+
+    await todoCollection.updateOne(
+        { _id: ObjectId(req.params.id) },
+        { $set: req.body }
+    );
 
     await connection.close();
 
     return {
-        body: JSON.stringify(result).replace(/_id/g, "id")
+        body: JSON.stringify({ status: 200 } )
     }
 }
