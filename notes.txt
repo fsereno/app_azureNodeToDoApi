@@ -1,5 +1,9 @@
+FRONTEND
+Client ID: 5179cf9c-a389-484f-b245-690efd0caeb0
+URI: https://todoapifsereno01tenant.onmicrosoft.com/5179cf9c-a389-484f-b245-690efd0caeb0
+
+
 API MANAGEMENT app
 Client ID: cdc989af-219d-42fd-95eb-7a14e0a60d5f
 URI: https://todoapifsereno01tenant.onmicrosoft.com/cdc989af-219d-42fd-95eb-7a14e0a60d5f
 SECRET: b38915c0-b6b7-4635-8a54-6e5c1e8c57b4
-
